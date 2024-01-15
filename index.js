@@ -38,3 +38,10 @@ function giessen() {
 
 }
 
+
+function resetGame() {
+    anzahlGegossen = 0;
+    document.getElementById("bereits-gegossen").innerHTML = anzahlGegossen;
+    document.getElementById("benoetigtes-giessen").innerHTML = 3;
+    document.getElementById("kartenbild").setAttribute("src", "bilder/Pflanze1.png");
+}

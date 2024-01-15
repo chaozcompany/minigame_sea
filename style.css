@@ -1,7 +1,6 @@
-
 body {
     margin: 0;
- font-family: "Dancing Script", cursive;;
+    font-family: "Lemon", serif;
     background-color: black;
 }
 
@@ -14,7 +13,7 @@ body {
 
 .kartenrahmen {
     border-radius: 20px;
-    padding: 20px;
+    padding: 2%;
     background: linear-gradient(#4e0655, #255eb3);
     width: 25%;
     margin: 0 auto;
@@ -26,8 +25,8 @@ body {
     justify-content: space-around;
     margin: 0 auto;
     text-align: center;
-    background: linear-gradient(#df76d6, #e3f030, #30f032, #0bd5e4);
-    padding: 2% 5%;
+    /* background: linear-gradient(rgba(118, 211, 223, 0.6), rgba(95, 236, 1, 0.6), rgba(48, 93, 240, 0.6), rgba(11, 213, 228, 0.6)); */
+    padding: 7% 10%;
     height: 80vh;
     border-radius: 2em;
     box-shadow: inset 5px 5px 25px #050b46;
@@ -35,23 +34,36 @@ body {
 }
 
 h2 {
-    font-size: max(2.5vw, 1.8em);
-    margin: 0;
-    text-shadow: 2px 2px 2px black;
-    color: #72dacc;
+    background: linear-gradient(to right, #eb04df, #42b2e6, #DD2476);
+    /* Replace these colors with your desired gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    text-align: center;
+}
+
+h2:hover {
+    background: linear-gradient(to right, #04eb3e, #0498b3, #E097A8);
+    /* Replace these colors with your desired gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    text-align: center;
+
 }
 
 .bildcontainer {
     border: 5px solid #fcf596;
     border-radius: 5px;
     box-sizing: border-box;
-    background-image: url(bilder/hintergrund.png);
+    /* background-image: url(bilder/hintergrund.png); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom center;
     display: flex;
     align-items: flex-end;
-    box-shadow: inset 0px 0px 25px black;
+    box-shadow: inset 21px 21px 52px #48bc72,
+        inset -21px -21px 52px #190b8f;
 }
 
 #kartenbild {
@@ -61,7 +73,7 @@ h2 {
 .erfahrungscontainer {
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 2em auto 1em;
     padding: 10px 0;
     width: 75%;
     background: linear-gradient(to right, #7f85f7, #4072bd, #df27b7);
@@ -81,28 +93,49 @@ h2 {
     font-size: xx-large;
     margin: 0 auto;
     padding: 10px 50px;
-    background-image: linear-gradient(#7407f0, #df03e7);
+    background-image: linear-gradient(#c899fd, #f232f8);
     font-weight: bold;
-    border: 5px solid #d4cfc9;
+    border: 5px solid #f1f368;
     border-radius: 10%/50%;
     box-shadow: inset 0px 0px 10px black;
-    color: white;
+    color: rgb(255, 255, 255);
     text-shadow: 1px 1px 5px black;
 }
 
 #giessen-button:hover {
     box-shadow: inset 0px 0px 5px black, 0px 0px 10px rgb(77, 255, 240);
     cursor: pointer;
-    border-color: #eaf86a;
+    border-color: #f81bf8;
 }
 
 #giessen-button:focus {
     outline: 0;
 }
 
+#reset-button {
+    background-image: linear-gradient(#7407f0, #df03e7);
+    border: 5px solid #64aaec;
+    border-radius: 10%/50%;
+    margin: 2em auto 1em;
+    padding:2em auto ; 
+    height: 3em;
+    width: 5em;
+    font-family: "Lemon", serif;
+    text-align: center;
+    color: #c899fd;
+}
+
+#reset-button:hover {
+    border-color: #7f85f7;
+}
+
 @media (max-width: 1200px) {
     .kartenrahmen {
         width: 50%;
+    }
+
+    .erfahrungscontainer {
+        margin: 1em 2.5em;
     }
 }
 
@@ -111,9 +144,10 @@ h2 {
         width: 75%;
     }
 
-    .erfahrungscontainer{
+    .erfahrungscontainer {
         padding: 5px 0;
         width: 95%;
+        margin: 2em auto 1em;
     }
 
     #giessen-button {
